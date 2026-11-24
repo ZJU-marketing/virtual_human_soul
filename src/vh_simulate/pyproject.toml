@@ -1,0 +1,16 @@
+[project]
+name = "vh-simulate"
+version = "0.1.0"
+description = "模拟模块: persona_id 初始化人物 agent, 对话式扮演"
+requires-python = ">=3.12"
+dependencies = [
+    "virtual-human",
+    "vh-generate",
+]
+
+[build-system]
+requires = ["uv_build>=0.13,<1.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "vh_simulate"

@@ -1,0 +1,22 @@
+[project]
+name = "virtual-human"
+version = "0.1.0"
+description = "「模拟人类」知识库: ORM + 检索 API (渐进式加载)"
+requires-python = ">=3.12"
+dependencies = [
+    "psycopg[binary]>=3.2",
+    "sqlalchemy[asyncio]>=2.1.9",
+    "pgvector>=0.3",
+    "python-dotenv>=1.0",
+    "alembic>=1.20.1",
+    "pydantic-settings>=2.16.3",
+    "boto3>=1.35",
+    "python-docx>=1.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.13,<1.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "virtual_human"

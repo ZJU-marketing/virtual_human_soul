@@ -1,0 +1,30 @@
+[project]
+name = "virtual-human-workspace"
+version = "0.1.0"
+description = "「模拟人类」工作区: 知识库 + 生成 + 模拟 + CLI + API 五个子包"
+requires-python = ">=3.12"
+dependencies = [
+    "virtual-human",
+    "vh-generate",
+    "vh-simulate",
+    "vh-cli",
+    "vh-api",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[tool.uv.sources]
+virtual-human = { workspace = true }
+vh-generate = { workspace = true }
+vh-simulate = { workspace = true }
+vh-cli = { workspace = true }
+vh-api = { workspace = true }
+
+[tool.uv.workspace]
+members = ["src/virtual_human", "src/vh_generate", "src/vh_simulate", "src/vh_cli", "src/vh_api"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

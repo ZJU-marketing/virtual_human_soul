@@ -1,0 +1,24 @@
+[project]
+name = "vh-api"
+version = "0.1.0"
+description = "REST API: FastAPI 封装知识库/生成/模拟模块, SSE 流式对话"
+requires-python = ">=3.12"
+dependencies = [
+    "virtual-human",
+    "vh-generate",
+    "vh-simulate",
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "langgraph-checkpoint-postgres>=2.0",
+    "psycopg[binary,pool]>=3.2",
+]
+
+[project.scripts]
+vh-api = "vh_api.main:serve"
+
+[build-system]
+requires = ["uv_build>=0.13,<1.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "vh_api"

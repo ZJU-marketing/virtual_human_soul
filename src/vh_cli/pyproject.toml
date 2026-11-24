@@ -1,0 +1,23 @@
+[project]
+name = "vh-cli"
+version = "0.1.0"
+description = "CLI: 骨架提示词 → 生成知识库内容, 终端 UTF-8 输出"
+requires-python = ">=3.12"
+dependencies = [
+    "virtual-human",
+    "vh-generate",
+]
+
+[project.scripts]
+vh-ingest = "vh_cli.main:ingest"
+vh-chat = "vh_cli.main:chat"
+vh-show = "vh_cli.main:show"
+vh-demo = "vh_cli.main:demo"
+vh-edit = "vh_cli.main:edit"
+
+[build-system]
+requires = ["uv_build>=0.13,<1.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "vh_cli"

@@ -1,0 +1,18 @@
+[project]
+name = "vh-generate"
+version = "0.1.0"
+description = "生成模块: LangChain 对话 agent + persona 种子生成 + 人物模拟"
+requires-python = ">=3.12"
+dependencies = [
+    "virtual-human",
+    "langchain>=1.5.0",
+    "langchain-openai>=1.8.1",
+    "langchain-core>=1.8.2",
+]
+
+[build-system]
+requires = ["uv_build>=0.13,<1.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "vh_generate"
